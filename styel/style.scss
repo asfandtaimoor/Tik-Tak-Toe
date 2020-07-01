@@ -5,6 +5,8 @@
     transform: translate(-50%, -50%);
 }
 
+$timesSize:200px;
+$circleSize: 150px;
 body {
     text-align: center;
     .game {
@@ -17,6 +19,22 @@ body {
         .block {
             border: 2px solid black;
             cursor: pointer;
+            position: relative;
+            i {
+                @include center();
+            }
+            .fa-times {
+                font-size: $timesSize;
+            }
+            .fa-circle {
+                font-size: $circleSize;
+            }
+            .hide {
+                display: none;
+            }
+            .show {
+                display: block;
+            }
         }
     }
 }
