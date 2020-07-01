@@ -14,27 +14,31 @@ function show(elem) {
     let block = document.querySelector(`.${elem}`);
     let times = block.querySelector('.fa-times'); //player 1 symbol
     let circle = block.querySelector('.fa-circle'); // player 2 symbol
+    let allPlayer = block.querySelector('i');
 
 
+    if (allPlayer.classList.contains('show')) {
 
-    // for payer 1 (Times Player ) to show circle when clicked
-    if (player_1 === true) {
-        if (times.classList.contains("hide") == true) {
-            times.classList.add("show");
-        }
-
-
-        player_1 = false;
-        Player_2 = currentPlayer;
+        alert('Plese select empty box');
     } else {
-        if (circle.classList.contains("hide") == true) {
-            circle.classList.add("show");
+        // for payer 1 (Times Player ) to show circle when clicked
+        if (player_1 === true) {
+            if (times.classList.contains("hide") == true) {
+                times.classList.add("show");
+            }
+
+
+            player_1 = false;
+            Player_2 = currentPlayer;
+        } else {
+            if (circle.classList.contains("hide") == true) {
+                circle.classList.add("show");
+            }
+
+
+            Player_2 = false;
+            player_1 = currentPlayer;
         }
 
-
-        Player_2 = false;
-        player_1 = currentPlayer;
     }
-
-
 }
