@@ -2,7 +2,12 @@
 
 let win = document.querySelector('.alert-success');
 
-let winPlayer_1 = win.querySelector('h5');
+let winText = win.querySelector('.text');
+
+let winTextMessage = winText.querySelector('h5');
+
+
+
 
 // Wining Algorithm
 
@@ -45,6 +50,10 @@ let p2_b9 = box_9.querySelector('.fa-circle');
 
 
 
+// Draw 
+
+let turn = 0;
+
 // Player  status
 let currentPlayer = true;
 let player_1 = false; // times
@@ -70,6 +79,7 @@ function show(elem) {
         if (player_1 === true) {
             if (times.classList.contains("hide") == true) {
                 times.classList.remove("hide");
+                turn++;
             }
 
 
@@ -78,12 +88,15 @@ function show(elem) {
         } else {
             if (circle.classList.contains("hide") == true) {
                 circle.classList.remove("hide");
+                turn++;
             }
 
 
             Player_2 = false;
             player_1 = currentPlayer;
         }
+
+        // draw
 
     } else {
         alert("Please select empty one");
@@ -94,55 +107,65 @@ function show(elem) {
 
     if (!(p1_b1.classList.contains('hide') || p1_b2.classList.contains('hide') || p1_b3.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b4.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b6.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b7.classList.contains('hide') || p1_b8.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b1.classList.contains('hide') || p1_b4.classList.contains('hide') || p1_b7.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b2.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b8.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b3.classList.contains('hide') || p1_b6.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b1.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b3.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b7.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 1 wins the game";
+        winTextMessage.innerHTML = "Player 1 wins the game";
     }
 
     // Winning algo for player 2
     if (!(p2_b1.classList.contains('hide') || p2_b2.classList.contains('hide') || p2_b3.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b4.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b6.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b7.classList.contains('hide') || p2_b8.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b1.classList.contains('hide') || p2_b4.classList.contains('hide') || p2_b7.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b2.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b8.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b3.classList.contains('hide') || p2_b6.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b1.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b3.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b7.classList.contains('hide'))) {
         win.classList.remove('hide');
-        winPlayer_1.innerHTML = "Player 2 wins the game";
+        winTextMessage.innerHTML = "Player 2 wins the game";
+    }
+
+
+
+    // Draw
+
+    if (turn === 9) {
+        win.classList.remove('hide');
+        winText.querySelector('h1').innerHTML = 'Oooops';
+        winText.querySelector('h5').innerHTML = 'The Match is draw';
     }
 
 }
