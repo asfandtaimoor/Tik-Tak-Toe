@@ -1,3 +1,9 @@
+// Winning block
+
+let win = document.querySelector('.alert-success');
+
+let winPlayer_1 = win.querySelector('h5');
+
 // Wining Algorithm
 
 // Value
@@ -87,44 +93,56 @@ function show(elem) {
 
 
     if (!(p1_b1.classList.contains('hide') || p1_b2.classList.contains('hide') || p1_b3.classList.contains('hide'))) {
-        alert("Line 1 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b4.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b6.classList.contains('hide'))) {
-        alert("line 2 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b7.classList.contains('hide') || p1_b8.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
-        alert("line 3 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b1.classList.contains('hide') || p1_b4.classList.contains('hide') || p1_b7.classList.contains('hide'))) {
-        alert("Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b2.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b8.classList.contains('hide'))) {
-        alert("Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b3.classList.contains('hide') || p1_b6.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
-        alert("Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b1.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b9.classList.contains('hide'))) {
-        alert("Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     } else if (!(p1_b3.classList.contains('hide') || p1_b5.classList.contains('hide') || p1_b7.classList.contains('hide'))) {
-        alert("Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 1 wins the game";
     }
 
     // Winning algo for player 2
     if (!(p2_b1.classList.contains('hide') || p2_b2.classList.contains('hide') || p2_b3.classList.contains('hide'))) {
-        alert(" circle Line 1 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b4.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b6.classList.contains('hide'))) {
-        alert("circle line 2 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b7.classList.contains('hide') || p2_b8.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
-        alert("circle line 3 working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b1.classList.contains('hide') || p2_b4.classList.contains('hide') || p2_b7.classList.contains('hide'))) {
-        alert("circle Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b2.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b8.classList.contains('hide'))) {
-        alert("circle Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b3.classList.contains('hide') || p2_b6.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
-        alert("circle Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b1.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b9.classList.contains('hide'))) {
-        alert("circle Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     } else if (!(p2_b3.classList.contains('hide') || p2_b5.classList.contains('hide') || p2_b7.classList.contains('hide'))) {
-        alert("circle Top left to bottom right working");
+        win.classList.remove('hide');
+        winPlayer_1.innerHTML = "Player 2 wins the game";
     }
 
 }
-
-
-
-// main algo
